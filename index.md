@@ -1,4 +1,6 @@
-## Welcome to GitHub Pages
+## CATALIST-2021
+
+CATALIST: CAmera  TrAnsformations for multi-LIngual Scene Text recognition
 
 You can use the [editor on GitHub](https://github.com/CATALIST-2021/CATALIST-2021.github.io/edit/main/index.md) to maintain and preview the content for your website in Markdown files.
 
