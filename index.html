@@ -62,7 +62,11 @@
                 <div class="row gx-4 justify-content-center">
                     <div class="col-lg-8">
                         <h2>Videos</h2>
-                        <p class="lead">Every video in CATALIST contains scene-text, potentially in a combination of three different languages, namely, English, Hindi, and Marathi. For each such scene-text, we create 12 videos using 12 different types of camera <i>transformations</i>, broadly categorized into 5 groups:
+                        <p class="lead">
+                            We present a total of 2322 (Train: 1597, Val: 199, Test: 526) scene-text videos. The videos contain a combination of three different languages, namely, English, Hindi, and Marathi. 
+                        </p>
+                        <p class="lead">
+                            For each such scene-text, we create 12 videos using 12 different types of camera <i>transformations</i>, broadly categorized into 5 groups:
                         </p>
                         <p>    
                         <ol>
@@ -73,12 +77,13 @@
                           <li>two types of <i>zoom</i> which could be in or out.</li>
                         </ol>
                         </p>      
-                        <p class="lead">We use a camera with a tripod stand to record all these videos to have a uniform control. It is important to note that there are four types of translations, whereas there are only two types for all other transformations. We capture all these videos at 25 fps with a resolution of 1920 × 1080. Fig.1 shows the distribution of videos on the basis of transformations.
+                        <p class="lead">We use a camera with a tripod stand to record all these videos to have a uniform control. It is important to note that there are four types of translations, whereas there are only two types for all other transformations. We capture all these videos at 25 fps with a resolution of 1920 × 1080. Table 1 shows the distribution of videos on the basis of transformations.
                         </p>
+
                         <figure>
-                            <img src="assets/transformation_distribution.png" alt="Transformation Distribution" class="img-thumbnail">
-                            <figcaption class="text-center">Fig.1 - Transformation Distribution</figcaption>
-                          </figure>
+                            <img class="img-thumbnail" src="assets/transformation_distribution.png" alt="Transformation Distribution">
+                            <figcaption class="text-center">Table 1: Transformation Distribution</figcaption>
+                        </figure>
                         
                     </div>
                 </div>
@@ -90,7 +95,18 @@
                 <div class="row gx-4 justify-content-center">
                     <div class="col-lg-8">
                         <h2>Annotation</h2>
-                        <p class="lead">Lorem ipsum dolor sit amet, consectetur adipisicing elit. Aut optio velit inventore, expedita quo laboriosam possimus ea consequatur vitae, doloribus consequuntur ex. Nemo assumenda laborum vel, labore ut velit dignissimos.</p>
+                        <p class="lead">train_ann.txt and val_ann.txt are tab seperated files. Each line contains the following data:
+                        </p>
+                        <ul>
+                            <li>Video name</li>
+                            <li>Mannually annotated as well as verified text annotation</li>
+                            <li>Type of transformation. Either of T, R, P, Z, S, TR, </li>
+                            <li>A number in some cases</li>
+                            <li>A number in some cases</li>
+                        </ul>
+                        <p>
+                            We also provide mask for all video frames which we have generated using Google Vision API.
+                        </p>
                     </div>
                 </div>
             </div>
