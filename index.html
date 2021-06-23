@@ -110,8 +110,8 @@
                            \N in some annotations.
                         </p>
                         <p class="lead">
-                            We also provide word-level mask for all video frames which we generate using <a href="https://cloud.google.com/vision/docs/ocr" target="_blank">Cloud Vision API</a>. This is provided if needed for weak supervision.
-                            train_bbox and val_bbox contain a folder for each video. Each video folder contains JSON files for each frame of the video with word-level mask as given using Vision API. The first object in the JSON file is the mask for all the text in the frame. The following objects are mask for each individual word. We recommend using word-level masks as per the text annotation in train_ann.txt and val_ann.txt file. Note that the text annotations (by Cloud Vision API) and mask are not verified by us.
+                            We also provide word-level and paragraph-level mask for all video frames which we generate using <a href="https://cloud.google.com/vision/docs/ocr" target="_blank">Cloud Vision API</a>. This is provided if needed for weak supervision.
+                            train_bbox and val_bbox folders contain a folder for each video. Each video folder contains JSON files for each frame of the video along with the mask as given by the Vision API. The first object in the JSON file is the mask for <em>all</em> the text in the frame, alternativel called the paragraph-level mask. The following objects in the JSON file are mask for each individual word. We recommend using word-level masks as per the text annotation in train_ann.txt and val_ann.txt file. Note that the text annotations (by Cloud Vision API) and mask are not verified by us.
                         </p>
 
                         <div id="carouselExampleCaptions" class="carousel slide" data-bs-ride="carousel">
