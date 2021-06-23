@@ -100,12 +100,21 @@
                         <ul>
                             <li>Video name</li>
                             <li>Mannually annotated as well as verified text annotation</li>
-                            <li>Type of transformation. Either of T, R, P, Z, S, TR, </li>
-                            <li>A number in some cases</li>
-                            <li>A number in some cases</li>
+                            <li>Type of transformation. Either of T, R, P, Z, TR, S</li>
+                            <li>Time where transformation starts. (Default: start of video)</li>
+                            <li>Time where transformation ends. (Default: end of video)</li>
                         </ul>
+
+                        <p>Z - Zoom
+                           P - Pan (l2r, r2l)
+                           R - Rotate
+                           TR - Translation left, right, up, down
+                           T - Tilt (Pan u2d, d2u)
+                           S - Only 5 videos in Train annotations.
+                        </p>
                         <p class="lead">
-                            We also provide mask for all video frames which we have generated using Google Vision API.
+                            We also provide word-level mask for all video frames which we generate using <a href="https://cloud.google.com/vision/docs/ocr">Cloud Vision API</a>. This is provided in needed for weak supervision.
+                            train_bbox and val_bbox contain a folder for each video. Each video folder contains JSON files for each frame of the video with word-level mask as given using Vision API. The first object in the JSON file is the mask for all the text in the frame. The following objects are mask for each individual word. We recommend using word-level masks as per the text annotation in train_ann.txt and val_ann.txt file.
                         </p>
                     </div>
                 </div>
