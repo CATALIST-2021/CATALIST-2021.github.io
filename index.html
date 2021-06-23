@@ -107,10 +107,11 @@
 
                         <p>
                            S - Only 5 videos in Train annotations.
+                           \N in some annotations.
                         </p>
                         <p class="lead">
-                            We also provide word-level mask for all video frames which we generate using <a href="https://cloud.google.com/vision/docs/ocr">Cloud Vision API</a>. This is provided in needed for weak supervision.
-                            train_bbox and val_bbox contain a folder for each video. Each video folder contains JSON files for each frame of the video with word-level mask as given using Vision API. The first object in the JSON file is the mask for all the text in the frame. The following objects are mask for each individual word. We recommend using word-level masks as per the text annotation in train_ann.txt and val_ann.txt file.
+                            We also provide word-level mask for all video frames which we generate using <a href="https://cloud.google.com/vision/docs/ocr" target="_blank">Cloud Vision API</a>. This is provided if needed for weak supervision.
+                            train_bbox and val_bbox contain a folder for each video. Each video folder contains JSON files for each frame of the video with word-level mask as given using Vision API. The first object in the JSON file is the mask for all the text in the frame. The following objects are mask for each individual word. We recommend using word-level masks as per the text annotation in train_ann.txt and val_ann.txt file. Note that the text annotations (by Cloud Vision API) and mask are not verified by us.
                         </p>
                     </div>
                 </div>
@@ -122,7 +123,7 @@
                 <div class="row gx-4 justify-content-center">
                     <div class="col-lg-8">
                         <h2>Download</h2>
-                        <p class="lead">Lorem ipsum dolor sit amet, consectetur adipisicing elit. Aut optio velit inventore, expedita quo laboriosam possimus ea consequatur vitae, doloribus consequuntur ex. Nemo assumenda laborum vel, labore ut velit dignissimos.</p>
+                        <p class="lead">Complete dataset can be downloaded from <a href="http://www.google.com" target="_blank">here</a>.</p>
                     </div>
                 </div>
             </div>
@@ -131,8 +132,7 @@
         <section id="challenge">
             <div class="container px-4">
                 <div class="row gx-4 justify-content-center">
-                    <div class="col-lg-8">
-                        
+                    <div class="col-lg-8">         
                         <h2>Challenge</h2>
                         <p class="lead">Coming Soon
                         </p>
