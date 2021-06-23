@@ -62,10 +62,10 @@
                     <div class="col-lg-8">
                         <h2>Videos</h2>
                         <p class="lead">
-                            We present a total of 2322 (Train: 1597, Val: 199, Test: 526) scene-text videos. The videos contain a combination of three different languages, namely, English, Hindi, and Marathi. 
+                            We present a total of <b>2322 (Train: 1597, Val: 199, Test: 526) scene-text videos</b>. The videos contain a combination of three different languages, namely, <b>English, Hindi, and Marathi.</b> 
                         </p>
                         <p class="lead">
-                            For each such scene-text, we create 12 videos using 12 different types of camera <i>transformations</i>, broadly categorized into 5 groups:
+                            For each such scene-text, we create around 12 videos using 12 different types of camera <i>transformations</i>, broadly categorized into 5 groups:
                         </p>
                         <p>    
                         <ol>
@@ -131,7 +131,7 @@
                 <div class="row gx-4 justify-content-center">
                     <div class="col-lg-8">
                         <h2>Annotation</h2>
-                        <p class="lead">train_ann.txt and val_ann.txt are tab seperated files. Each line contains the following data:
+                        <p class="lead"><i>train_ann.txt</i> and <i>val_ann.txt</i> are tab seperated files. Each line contains the following data:
                         </p>
                         <ul>
                             <li>Video name</li>
@@ -151,7 +151,12 @@
 
                         <p class="lead">
                             We also provide word-level and paragraph-level mask for all video frames which we generate using <a href="https://cloud.google.com/vision/docs/ocr" target="_blank">Cloud Vision API</a>. This is provided if needed for weak supervision.
-                            train_bbox and val_bbox folders contain a folder for each video. Each video folder contains JSON files for each frame of the video along with the mask as given by the Vision API. The first object in the JSON file is the mask for <em>all</em> the text in the frame, alternativel called the paragraph-level mask. The following objects in the JSON file are mask for each individual word. We recommend using word-level masks as per the text annotation in train_ann.txt and val_ann.txt file. Note that the text annotations (by Cloud Vision API) and mask are not verified by us.
+                        </p>
+                        <p class="lead">
+                            train_bbox and val_bbox folders contain a folder for each video. Each video folder contains JSON files for each frame of the video along with the mask as given by the Vision API. The first object in the JSON file is the mask for <em>all</em> the text in the frame, alternativel called the paragraph-level mask. The following objects in the JSON file are mask for each individual word. 
+                        </p>
+                        <p class="lead">
+                            We <b>recommend</b> using word-level masks along with the text labels in <i>train_ann.txt</i> and <i>val_ann.txt</i> file. <b>Note</b> that the text annotations (by Cloud Vision API) and mask are not verified by us.
                         </p>
 
                         <div id="carouselExampleCaptions" class="carousel slide" data-bs-ride="carousel">
